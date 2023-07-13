@@ -13,7 +13,7 @@ with st.container():
 
 with st.container():
     st.write("---")
-    left_column, right_column = st.columns(2)
+    left_column, _, right_column = st.columns((2.5, 0.8, 2))
     with left_column:
         st.header("What I do")
         st.write("##")
@@ -26,17 +26,27 @@ with st.container():
             - State estimation (Kalman filtering)
             """
         )
+    with right_column:
+        st.subheader("Research Statement")
+        st.write(
+            """
+            I research how machine learning methods can be applied
+            in the real world. I am passionate about using classical and
+            machine-learning approaches to engineer solutions to complex problems. Currently, I work on developing high-performance,
+            robust, safe solutions for autonomous robotic control.
+            """
+        )
 
 
 with st.container():
     st.write("---")
     st.header("My Portfolio Projects")
     st.write("##")
-    image_column, text_column = st.columns((1, 2))
+    image_column, text_column = st.columns((1, 4))
     # with image_column:
         # st.image(img_lottie_animation)
+    st.write("Simple projects to demonstrate complex concepts")
     with text_column:
-        st.subheader("I enjoy building simple projects to demonstrate complex concepts")
         st.write(
             """
             - Deep reinforcement learning algorithms: [GitHub >](https://github.com/BDEvan5/BaselineDRL)
@@ -47,21 +57,12 @@ with st.container():
 
 
 
-# with st.container():
-#     st.write("---")
-#     st.header("My Research Papers")
-#     st.write("##")
-    # image_column, text_column = st.columns((1, 2))
-    # # with image_column:
-    #     # st.image(img_lottie_animation)
-    # with text_column:
-    #     st.subheader("Integrate Lottie Animations Inside Your Streamlit App")
-    #     st.write(
-    #         """
-    #         Learn how to use Lottie Files in Streamlit!
-    #         Animations make our web app more engaging and fun, and Lottie Files are the easiest way to do it!
-    #         In this tutorial, I'll show you exactly how to do it
-    #         """
-    #     )
+with st.container():
+    st.write("---")
+    st.header("My Research Papers")
+    st.write("##")
+    st.write(f"- Safe reinforcement learning for high-speed autonomous racing. *Cognitvie Robotics, 2023*")
+    st.write(f"- High-speed Autonomous Racing using Trajectory-aided Deep Reinforcement Learning. *Robotics and Automation Letters, 2023*")
+
 
 
